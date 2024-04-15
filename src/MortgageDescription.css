@@ -1,0 +1,215 @@
+
+
+.mortgage-program-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .mortgage-program-section {
+    margin-bottom: 30px;
+  }
+  
+  .how-to-apply-section {
+    margin-top: 30px;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  h3 {
+    color: #666;
+  }
+  
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
+  p {
+    line-height: 1.6;
+  }
+  
+  strong {
+    font-weight: bold;
+  }
+  .footer {
+    background-image: url('31.jpg');
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 20px;
+  }
+  
+  .footer-section {
+    flex: 1 1 25%;
+    margin-bottom: 20px;
+  }
+  
+  .footer-logo img {
+    width: 100px;
+  }
+  
+  .footer-links ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 5px;
+  }
+  
+  .contact-info div {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .map-container {
+    flex-basis: 100%;
+  }
+  
+  .chat-buttons-container {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .whatsapp-button,
+  .telegram-button,
+  .instagram-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .whatsapp-button img,
+  .telegram-button img,
+  .instagram-button img {
+    width: 50px;
+    height: 50px;
+  }
+  /* Стили для списка */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  /* Стили для ссылок в списке */
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    color: #ebe9e9; /* Цвет текста ссылок */
+    font-size: 16px; /* Размер шрифта */
+    transition: color 0.3s; /* Плавное изменение цвета при наведении */
+  }
+  
+  ul li a:hover {
+    color: #0084ff; /* Цвет текста при наведении */
+  }
+  /* Стили для контейнера с контактными данными */
+  .contact-info div {
+    background-color: #f9f9f9; /* Цвет фона */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 8px; /* Скругление углов */
+    box-shadow: 0 0 10px rgba(4, 81, 247, 0.1); /* Тень */
+  }
+  
+  /* Стили для заголовка контактов */
+  .contact-info h4 {
+    font-size: 20px; /* Размер шрифта заголовка */
+    margin-bottom: 10px; /* Отступ снизу */
+    color: #0964db; /* Цвет текста заголовка */
+  }
+  
+  /* Стили для контактных данных */
+  .contact-info p {
+    margin-bottom: 5px; /* Отступ снизу */
+    color: #666; /* Цвет текста контактных данных */
+  }
+  .logo-link {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .logo-link img {
+    width: 100px; /* Замените на ваш желаемый размер */
+    height: auto; /* Позволяет изображению масштабироваться пропорционально */
+  }
+  /* Общие стили для карты */
+  .map-container {
+    width: 100%;
+    margin-top: 20px; /* Добавим немного отступа сверху */
+  }
+  
+  /* Стили для мобильной адаптации */
+  @media only screen and (max-width: 600px) {
+    .footer {
+      background-image: url(30.jpg);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #f8f9fa;
+      padding: 20px;
+      flex-direction: column;
+      align-content: flex-start;
+  }
+    .footer-section.contact-info {
+      order: -1; /* Помещаем блок с контактной информацией выше */
+    }
+    
+    .map-container {
+      height: 150px; /* Уменьшаем высоту карты */
+    }
+  }
+  /* Общие стили для карты */
+  .map-container {
+    width: 100%;
+    margin-top: 20px; /* Добавим немного отступа сверху */
+  }
+  
+  /* Стили для мобильной адаптации */
+  @media only screen and (max-width: 600px) {
+    .footer-section.contact-info {
+      order: 1; /* Помещаем блок с контактной информацией под логотип */
+    }
+    
+    .chat-buttons-container {
+      order: -1; /* Помещаем блок с кнопками соц сетей над картой */
+    }
+    
+    .map-container {
+      height: 150px; /* Уменьшаем высоту карты */
+    }
+  }
+  /* Общие стили для карты */
+  .map-container {
+    width: 100%;
+    margin-top: 20px; /* Добавим немного отступа сверху */
+  }
+  
+  /* Стили для мобильной адаптации */
+  @media only screen and (max-width: 600px) {
+    .footer-section.contact-info {
+      order: 1; /* Помещаем блок с контактной информацией под логотип */
+    }
+    
+    .chat-buttons-container {
+      order: -1; /* Помещаем блок с кнопками соц сетей над картой */
+    }
+    
+    .map-container {
+      height: 150px; /* Уменьшаем высоту карты */
+    }
+  }
+  

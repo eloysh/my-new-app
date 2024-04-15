@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './HomePage.css';
 import Oprosnik from './oprosnik';
 import Straniza from './Straniza';
-
+import MortgageDescription from './MortgageDescription.js'; // Импортируем компонент с описанием ипотеки
 
 
 
@@ -169,6 +169,19 @@ const HomePage = () => {
     <div className="homepage-container">
       <h1 className="homepage-heading">Пройди опрос и получи бесплатную консультацию!</h1>
       <Oprosnik />
+      <div className="home-page">
+      <h1>ИПОТЕКА И УСЛОВИЯ</h1>
+      <MortgageDescription /> 
+    </div>
+  
+    
+
+
+
+
+
+
+      
       <div className="property-list"></div>
     </div>
       <div className="homepage-container">
@@ -178,7 +191,7 @@ const HomePage = () => {
         <div className="property-list">
      
 
-          <div className="property-cards">
+          <div className="property-cards-house">
             {properties.map((property, index) => (
               <div key={property.id} className="property-card">
                 <h3 onClick={() => handleTitleClick(property)}>{property.title}</h3>

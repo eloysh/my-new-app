@@ -12,13 +12,12 @@ const ConstructionDetailsModal = ({ property, onClose, imageIndex, onPrevImage, 
           <button className="next-btn" onClick={onNextImage}>{'>'}</button>
         </div>
         <div className="property-info">
-          <p>Статус: {property.status}</p>
-          <p>Сроки строительства: {property.constructionTimeline}</p>
-          <p>Количество квартир: {property.numberOfApartments}</p>
+          <p>Буден сдан: II квартал 2024 года {property.status}</p>
+          <p>Сроки строительства: 1 год {property.constructionTimeline}</p>
+          <p>Количество квартир: 20 шт {property.numberOfApartments}</p>
           {/* Дополнительная информация о недвижимости */}
         </div>
-        <p>{property.description}</p>
-        <p>{property.price}</p>
+      
       </div>
     </div>
   );

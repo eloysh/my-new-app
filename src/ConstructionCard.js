@@ -1,5 +1,6 @@
 import React from 'react';
 import './ConstructionCard.css';
+
 const ConstructionCard = ({ property, onClick }) => {
   return (
     <div className="construction-card" onClick={() => onClick(property)}>

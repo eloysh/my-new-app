@@ -23,11 +23,10 @@ const Menu = () => {
       <nav className={`menu-container ${showMobileMenu ? 'active' : ''}`}>
         <ul>
           <li><Link to="/" onClick={toggleMobileMenu}>Главная</Link></li>
-          <li><Link to="/search" onClick={toggleMobileMenu}>Поиск</Link></li>
+          <li><Link to="/real-estate-catalog" onClick={toggleMobileMenu}>Новостройки</Link></li>
+          <li><Link to="/homepage-catalog" onClick={toggleMobileMenu}>Дома от застройщиков</Link></li> {/* Use toggleMobileMenu here */}
+          <li><Link to="/mortgage-program" onClick={toggleMobileMenu}>Ипотека</Link></li> {/* Use toggleMobileMenu here */}
           <li><Link to="/mortgage" onClick={toggleMobileMenu}>Калькулятор</Link></li>
-          <li><Link to="/contact" onClick={toggleMobileMenu}>Контакты</Link></li>
-          <li><Link to="/auth" onClick={toggleMobileMenu}>Войти</Link></li>
-          <li><Link to="/profile" onClick={toggleMobileMenu}>Профиль</Link></li>
         </ul>
       </nav>
     </div>

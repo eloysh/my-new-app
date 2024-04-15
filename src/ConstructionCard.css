@@ -1,18 +1,7 @@
-/* Для формы */
-.construction-details-modal {
-  width: 600px; /* Ширина формы равна ширине экрана */
 
-
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Затемнение фона */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .modal-content {
-  width: 80%; /* Ширина контента в форме */
+  width: 60%; /* Ширина контента в форме */
 
   background-color: white;
   padding: 20px;
