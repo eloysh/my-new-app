@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './HomePage.css';
-import Straniza from './Straniza';
+
 const Homepagecatalog = () => {
     const [selectedProperty, setSelectedProperty] = useState(null);
     const [isOpen, setIsOpen] = useState(false);
@@ -153,13 +153,8 @@ const Homepagecatalog = () => {
    
     return (
         <div>
-        <div className="container">
-          
-          <Straniza />
-          <div className="tn-atom" style={{ top: '160px', left: '128px', width: '185px', height: '40px', zoom: '1.016' }}>
-            
-          </div>
-        </div>
+ 
+       
       <div className="homepage-container">
 
       <h1 className="homepage-heading">КАТАЛОГ ДОМОВ ОТ НАШИХ ЗАСТРОЙЩИКОВ</h1>

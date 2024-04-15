@@ -53,7 +53,7 @@
 .menu-logo {
   display: block;
   margin: 0 auto;
-  width: 100px;
+  width: 180px;
   height: auto;
   margin-bottom: 20px;
 }
@@ -113,7 +113,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    width: 200px;
+    width: 500px;
     background-color: #4d6176;
     padding-top: 60px; /* Выравниваем меню под кнопку */
     transition: transform 0.3s ease-in-out;
@@ -125,11 +125,16 @@
   }
 
   .menu-container ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
+    top: 130px;
+    /* list-style-type: none; */
+    /* padding: 0; */
+    /* margin: 0; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
   .menu-container ul li {
     margin-bottom: 10px;
   }
