@@ -1,0 +1,423 @@
+.homepage-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.homepage-heading {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.property-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.property-card {
+  width: calc(33.33% - 20px); /* Ширина каждой карточки будет 33.33% от ширины родительского контейнера минус внешние отступы */
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+
+
+
+.property-card img {
+  flex-grow: 1; /* Растягиваем изображение на всю доступную высоту */
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.property-card h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.property-card p {
+  color: #666;
+}
+
+.property-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  position: fixed;
+  top: 50%; /* Разместить верхний край элемента в середине экрана */
+  left: 50%; /* Разместить левый край элемента в середине экрана */
+  transform: translate(-50%, -50%); /* Переместить элемент на половину его собственной ширины и высоты влево и вверх, соответственно */
+  max-width: 50%; /* Максимальная ширина элемента */
+  overflow-y: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.gallery {
+  position: relative;
+  text-align: center; /* Выравнивание содержимого по центру */
+}
+
+.gallery img {
+  display: inline-block; /* Сделать изображение блочным элементом */
+  max-width: 100%; /* Максимальная ширина изображения равна ширине контейнера */
+  height: auto; /* Автоматическая высота, чтобы сохранить соотношение сторон */
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  padding: 15px; /* Увеличиваем размер кнопки */
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.prev-btn {
+  left: 5%;
+  top: 50%; /* Позиционируем по вертикали вверху */
+  transform-origin: center; /* Устанавливаем точку поворота по центру */
+  transform: translateY(-50%) rotate(0deg); /* Поворачиваем на 45 градусов и сдвигаем вверх на 50% */
+}
+
+.next-btn {
+  right: 5%;
+  top: 50%; /* Позиционируем по вертикали вверху */
+  transform-origin: center; /* Устанавливаем точку поворота по центру */
+  transform: translateY(-50%) rotate(-0deg); /* Поворачиваем на -45 градусов и сдвигаем вверх на 50% */
+}
+
+
+
+.property-info {
+  margin-top: 20px;
+}
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+}
+
+.tabs button {
+  background-color: #ccc;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tabs button.active {
+  background-color: #333;
+  color: #fff;
+}
+
+.buy-btn {
+  background-color: #4caf50;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+  margin-top: 20px;
+}
+
+.buy-btn:hover {
+  background-color: #45a049;
+}
+
+/* Для мобильных устройств */
+@media only screen and (max-width: 844px) {
+  .property-cards {
+    flex-direction: column; /* Отображение карточек в столбец */
+  }
+
+  .property-card {
+    width: 90%; /* Показывать карточки на всю ширину экрана */
+  }
+
+  .modal-content {
+    width: 90%;
+    max-width: 90%; /* Максимальная ширина для мобильных устройств */
+  }
+
+  .close {
+    font-size: 20px; /* Уменьшение размера кнопки закрытия */
+  }
+
+  .gallery img {
+    width: 90%; /* Уменьшение размера изображения галереи */
+  }
+
+  .prev-btn,
+  .next-btn {
+    font-size: 16px; /* Уменьшение размера кнопок переключения */
+    padding: 8px; /* Уменьшение отступов кнопок */
+  }
+
+  .modal-content {
+    width: 90%; /* Уменьшаем ширину для мобильных устройств */
+    height: auto; /* Позволяет содержимому определять высоту */
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-items: center;
+}
+
+  .tabs button {
+    margin-bottom: 10px; /* Добавление отступа между вкладками */
+  }
+}
+@media only screen and (min-width: 845px) {
+  .property-card {
+    display: inline-block; /* Отображаем карточки в строчку */
+    width: calc(33.33% - 20px); /* Устанавливаем равную ширину с учетом отступов */
+    margin-right: 20px; /* Добавляем правый отступ между карточками */
+    margin-bottom: 20px; /* Отступ снизу для карточек */
+    vertical-align: top; /* Выравниваем по верхнему краю */
+    box-sizing: border-box; /* Учитываем padding и border в расчете ширины */
+  }
+}
+.menu-container.active {
+  z-index: 1001; /* Higher z-index to bring it to the forefront */
+}
+
+/* Your existing CSS styles */
+.modal {
+  display: flex;
+
+  position: fixed;
+  top: 50px;
+  left: 0px;
+  width: 100%;
+
+  z-index: 1000;
+  flex-direction: row;
+  align-content: center;
+}
+.hamburger-menu.active {
+  z-index: 2001; /* Higher z-index to bring it to the forefront */
+}
+.footer {
+  background-image: url('31.jpg');
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.footer-section {
+  flex: 1 1 25%;
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  width: 100px;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 5px;
+}
+
+.contact-info div {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.map-container {
+  flex-basis: 100%;
+}
+
+.chat-buttons-container {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.whatsapp-button,
+.telegram-button,
+.instagram-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.whatsapp-button img,
+.telegram-button img,
+.instagram-button img {
+  width: 50px;
+  height: 50px;
+}
+/* Стили для списка */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Стили для ссылок в списке */
+ul li {
+  margin-bottom: 10px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #ebe9e9; /* Цвет текста ссылок */
+  font-size: 16px; /* Размер шрифта */
+  transition: color 0.3s; /* Плавное изменение цвета при наведении */
+}
+
+ul li a:hover {
+  color: #0084ff; /* Цвет текста при наведении */
+}
+/* Стили для контейнера с контактными данными */
+.contact-info div {
+  background-color: #f9f9f9; /* Цвет фона */
+  padding: 20px; /* Внутренние отступы */
+  border-radius: 8px; /* Скругление углов */
+  box-shadow: 0 0 10px rgba(4, 81, 247, 0.1); /* Тень */
+}
+
+/* Стили для заголовка контактов */
+.contact-info h4 {
+  font-size: 20px; /* Размер шрифта заголовка */
+  margin-bottom: 10px; /* Отступ снизу */
+  color: #0964db; /* Цвет текста заголовка */
+}
+
+/* Стили для контактных данных */
+.contact-info p {
+  margin-bottom: 5px; /* Отступ снизу */
+  color: #666; /* Цвет текста контактных данных */
+}
+.logo-link {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.logo-link img {
+  width: 100px; /* Замените на ваш желаемый размер */
+  height: auto; /* Позволяет изображению масштабироваться пропорционально */
+}
+/* Общие стили для карты */
+.map-container {
+  width: 100%;
+  margin-top: 20px; /* Добавим немного отступа сверху */
+}
+
+/* Стили для мобильной адаптации */
+@media only screen and (max-width: 600px) {
+  .footer {
+    background-image: url(30.jpg);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 20px;
+    flex-direction: column;
+    align-content: flex-start;
+}
+  .footer-section.contact-info {
+    order: -1; /* Помещаем блок с контактной информацией выше */
+  }
+  
+  .map-container {
+    height: 150px; /* Уменьшаем высоту карты */
+  }
+}
+/* Общие стили для карты */
+.map-container {
+  width: 100%;
+  margin-top: 20px; /* Добавим немного отступа сверху */
+}
+
+/* Стили для мобильной адаптации */
+@media only screen and (max-width: 600px) {
+  .footer-section.contact-info {
+    order: 1; /* Помещаем блок с контактной информацией под логотип */
+  }
+  
+  .chat-buttons-container {
+    order: -1; /* Помещаем блок с кнопками соц сетей над картой */
+  }
+  
+  .map-container {
+    height: 150px; /* Уменьшаем высоту карты */
+  }
+}
+/* Общие стили для карты */
+.map-container {
+  width: 100%;
+  margin-top: 20px; /* Добавим немного отступа сверху */
+}
+
+/* Стили для мобильной адаптации */
+@media only screen and (max-width: 600px) {
+  .footer-section.contact-info {
+    order: 1; /* Помещаем блок с контактной информацией под логотип */
+  }
+  
+  .chat-buttons-container {
+    order: -1; /* Помещаем блок с кнопками соц сетей над картой */
+  }
+  
+  .map-container {
+    height: 150px; /* Уменьшаем высоту карты */
+  }
+}

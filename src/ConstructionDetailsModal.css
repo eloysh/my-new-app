@@ -1,0 +1,90 @@
+.construction-details-modal {
+  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.95); /* Полупрозрачный белый цвет */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-width: 60%;
+  width: 60%;
+  max-height: 80%;
+  overflow: auto;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.construction-details-modal.open {
+  opacity: 1;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.gallery {
+  position: relative; /* Для позиционирования кнопок внутри галереи */
+  text-align: center; /* Для выравнивания кнопок по центру */
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute; /* Абсолютное позиционирование относительно родительского элемента */
+  top: 50%; /* Расположение по вертикали на 50% от верхнего края галереи */
+  transform: translateY(-50%); /* Сдвиг кнопок вверх на 50% от их собственной высоты, чтобы они оказались по центру */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.prev-btn {
+  left: 5%;
+  transform: translate(-50%, -50%);
+}
+.next-btn {
+  right: 170px; /* Расположение кнопки "вперед" справа */
+}
+
+.property-info {
+  margin-top: 20px;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-enter {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.fade-exit {
+  animation: fadeOut 0.3s ease-in-out;
+}
