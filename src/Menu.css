@@ -1,79 +1,71 @@
 /* Menu.css */
-/* Стили для мобильных устройств */
-@media only screen and (max-width: 430px) {
-  .menu-container {
-    padding: 2px 2px; /* Уменьшаем отступы внутри меню */
-    max-width: 90%; /* Уменьшаем максимальную ширину для мобильных устройств */
-  }
-
-  .menu-container ul {
-    flex-wrap: wrap; /* Разрешаем перенос элементов списка на новую строку */
-    justify-content: center; /* Выравниваем элементы списка по центру */
-  }
-
-  .menu-container li {
-    margin: 5px; /* Уменьшаем отступ между пунктами меню */
-  }
+.menu-container {
+  background-color: rgba(255, 255, 255, 0.8); 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.menu-container {
-  background-color: #648fbd; /* Цвет фона меню */
-  padding: 20px;
+.menu-container.active {
+  opacity: 1;
 }
 
 .menu-container ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
 }
 
 .menu-container ul li {
-  margin-right: 10px;
-}
-
-.menu-container ul li:last-child {
-  margin-right: 0;
+  margin-bottom: 30px;
 }
 
 .menu-container ul li a {
-  color: #fff; /* Цвет текста ссылок */
+  font-size: 24px;
+  color: #333;
   text-decoration: none;
-  padding: 10px 20px; /* Отступы вокруг текста ссылок */
-  border-radius: 5px; /* Закругленные углы для ссылок */
-  transition: background-color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .menu-container ul li a:hover {
-  background-color: #779dc8; /* Цвет фона при наведении */
+  color: #ff5722;
 }
 
-
-.menu-logo {
-  display: block;
-  margin: 0 auto;
-  width: 180px;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-/* Стили для кнопки-гамбургера */
 .hamburger-menu {
-  display: none; /* По умолчанию скрываем кнопку-гамбургер */
+  position: fixed;
+  top: 20px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.mobile-menu {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: none; /* По умолчанию скрываем бар меню на мобильных устройствах */
+.hamburger-menu .line {
+  width: 100%;
+  height: 4px;
+  background-color: #333;
+  transition: transform 0.3s ease;
 }
 
-/* Активное состояние кнопки-гамбургера */
+
 .hamburger-menu.active .line:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(10px) rotate(45deg);
 }
 
 .hamburger-menu.active .line:nth-child(2) {
@@ -81,68 +73,42 @@
 }
 
 .hamburger-menu.active .line:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-10px) rotate(-45deg);
 }
 
-/* Стили для линий кнопки-гамбургера */
-.line {
-  width: 25px;
-  height: 3px;
-  background-color: #070707;
-  margin: 5px;
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+/* Menu.css */
+.menu-logo {
+  margin-top: auto;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+}
+/* Menu.css */
+/* Menu.css */
+.active-link {
+  color: #ff9800; /* Change the color to your desired highlight color */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8); /* Add shadow effect */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.8); /* Add shadow effect */
+  transition: all 0.3s ease-in-out; /* Add transition effect */
 }
 
-/* Показываем бар меню при активации кнопки-гамбургера */
-.menu-container.active {
-  display: block;
+.active-link:hover {
+  text-shadow: none; /* Remove shadow effect on hover */
+  box-shadow: none; /* Remove shadow effect on hover */
+  transform: scale(1.1); /* Scale up on hover */
 }
 
-/* Показываем кнопку-гамбургер при мобильной адаптации */
-@media only screen and (max-width: 430px) {
-  .hamburger-menu {
-    display: block;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-  }
 
-  .menu-container {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 500px;
-    background-color: #4d6176;
-    padding-top: 60px; /* Выравниваем меню под кнопку */
-    transition: transform 0.3s ease-in-out;
-    transform: translateX(100%);
-  }
+@media screen and (max-width: 768px) {
+  .menu-logo {
 
-  .menu-container.active {
-    transform: translateX(0);
-  }
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 0;
 
-  .menu-container ul {
-    top: 130px;
-    /* list-style-type: none; */
-    /* padding: 0; */
-    /* margin: 0; */
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-}
-  .menu-container ul li {
-    margin-bottom: 10px;
-  }
-
-  .menu-container ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    display: block;
+    max-width: 250px;
+    /* Уменьшенная ширина логотипа для экранов меньше 768px */
   }
 }

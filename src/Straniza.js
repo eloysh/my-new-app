@@ -42,7 +42,7 @@ const Straniza = () => {
 </div>
 </div>
  {/* Третий блок */}
- <div className="third-block" style={{ maxHeight: maxHeight }}>
+ <div className="container" style={{ maxHeight: maxHeight }}>
         {/* Выводим текущее изображение с помощью индекса */}
         <div className="background-image" style={{ backgroundImage: `url(${images[currentImageIndex]})` }}>
           <h3 className="bottom-center-heading">ИНДИВИДУАЛЬНОЕ ЖИЛИЩНОЕ СТРОИТЕЛЬСТВО</h3>

@@ -1,16 +1,14 @@
 .container {
   display: flex;
-  flex-wrap: nowrap;
+  background-color: #ff9800;
   justify-content: flex-start;
-  max-width: 960px;
-  height: 350px;
   margin: 0 auto;
   padding: 30px;
   align-items: center;
   align-content: center;
-  margin-top: 0px;
+  /* margin-top: 10px; */
+  margin-right: 10px;
 }
-
 
  
 
@@ -67,9 +65,11 @@
   .first-block,
   .second-block,
   .third-block {
+    
     flex-basis: 100%;
     margin-bottom: 1px;
   }
+  
   
   .background-image {
     height: 150px;
@@ -112,6 +112,8 @@
 }
 
 .first-block button {
+  top: 310px;
+  
   background-color: #b3650d;
   color: #fff;
   border: none;
@@ -201,24 +203,34 @@
 }
 
 .background-image {
-  width: 280px;
-  height: 370px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 8px;
-  overflow: hidden;
-  position: relative;
-}
 
+ 
+
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
 @media screen and (max-width: 768px) {
   .third-block,
   .first-block,
   .second-block {
-    width: 280px;
+
     flex-basis: 100%;
     margin: 40px;
     margin-bottom: 70px;
     
   }
-  
+  .first-block button {
+    top: 310px;
+    background-color: #b3650d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 }

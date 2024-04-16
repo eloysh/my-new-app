@@ -8,7 +8,7 @@ const PropertyCard = ({ property, onTitleClick, onCloseForm }) => {
 
 
   return (
-    <div className="property-card">
+    <div className="property-card1">
       {/* Displaying the first image */}
       <img className="property-image" src={property.image1} alt={property.title} onClick={handleTitleClick} />
 

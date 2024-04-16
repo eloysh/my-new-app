@@ -11,7 +11,7 @@
   }
   
   .background-image {
-   
+   top: 70px;
     background-size: cover;
     background-position: center;
     border-radius: 8px;
@@ -24,7 +24,7 @@
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.5rem;
-    color: #fff;
+    color: #ff572285;
   }
   @media screen and (max-width: 768px) {
   .container {
@@ -39,15 +39,16 @@
 }
 
 .first-block {
+  top: 80px;
   background-image: url('./13.jpg');
   background-size: cover;
   background-position: center;
-  position: relative;
+
   overflow: hidden;
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 280px;
-  height: 200px;
+  height: 300px;
 }
 
 .second-block {
@@ -70,12 +71,12 @@
 @media screen and (max-width: 768px){
 
   .second-block {
-    top: 80px;
+    top: 60px;
     width: 280px;
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease;
-    background-image: url(http://localhost:3000/static/media/41.31fd99f543960a355f97.png);
-    height: 210px;
+    background-image: url(41.png);
+    height: 260px;
   }
   }

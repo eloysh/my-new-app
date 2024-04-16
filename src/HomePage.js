@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './HomePage.css';
 import Oprosnik from './oprosnik';
 import Straniza from './Straniza';
-import MortgageDescription from './MortgageDescription.js'; // Импортируем компонент с описанием ипотеки
+
 
 
 
@@ -169,19 +169,6 @@ const HomePage = () => {
     <div className="homepage-container">
       <h1 className="homepage-heading">Пройди опрос и получи бесплатную консультацию!</h1>
       <Oprosnik />
-      <div className="home-page">
-      <h1>ИПОТЕКА И УСЛОВИЯ</h1>
-      <MortgageDescription /> 
-    </div>
-  
-    
-
-
-
-
-
-
-      
       <div className="property-list"></div>
     </div>
       <div className="homepage-container">
@@ -191,7 +178,7 @@ const HomePage = () => {
         <div className="property-list">
      
 
-          <div className="property-cards-house">
+          <div className="property-cards">
             {properties.map((property, index) => (
               <div key={property.id} className="property-card">
                 <h3 onClick={() => handleTitleClick(property)}>{property.title}</h3>
@@ -274,52 +261,24 @@ const HomePage = () => {
         )}
       </div>
       <footer className="footer">
-      <div className="footer-section">
-      <button className="logo-link" onClick={() => window.scrollTo(0, 0)}>
-  <img src="./logo.jpg" alt="Логотип" />
-</button>
-</div>
+  <div className="footer-contact">
+    <h3>Контакты</h3>
+    <p>Телефон: +7 (984) 192-50-69</p>
+    <p>Email: eloysh8814@gmail.com</p>
+    <p>Адрес: г. Владивосток, ул. Светланская, дом 65</p>
+  </div>
 
-  <div className="footer-section">
- <h4 style={{ color: 'blue', fontFamily: 'cursive' }}>Агенство недвижимости</h4>
-
+  <div className="footer-menu">
+    <h4>Недвижимость</h4>
     <ul>
-      <li><a href="/search">О компании</a></li>
-      <li><a href="property/:id">Контакты</a></li>
-      
-      <li><a href="real-estate-catalog">Новостройки</a></li>
-      <li><a href="mortgage">Дома от застройщиков</a></li>
-    </ul>
+    <li><a href="/search" className="footer-link">О компании</a></li>
+    <li><a href="property/:id" className="footer-link">Контакты</a></li>
+    <li><a href="mortgage" className="footer-link">Дома</a></li>
+    <li><a href="real-estate-catalog" className="footer-link">Новостройки</a></li>
+  </ul>
   </div>
-  <div className="footer-section contact-info">
-   
-    <div>
-      <h4>Контакты</h4>
-      <p>Телефон: +7 (984) 192-50-69</p>
-      <p>Email: eloysh8814@gmail.com</p>
-      <p>Адрес: г. Владивосток, ул. Светланская, дом 65</p>
-    </div>
-  </div>
-  
-  <div className="map-container">
-  <iframe
-  title="Location Map"
-  width="100%"
-  height="200"
-  frameBorder="0"
-  style={{ border: '0' }}
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2961.6122090024026!2d132.18651827426833!3d43.35233584086432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fb3b05d61f64e27%3A0xe5253588e6436795!2s%D1%83%D0%BB.+%D0%A4%D1%80%D1%83%D0%BD%D0%B7%D0%B5%2C%2072%2C%20%D0%90%D1%80%D1%82%D0%B5%D0%BC%2C%20%D0%9F%D1%80%D0%B8%D0%BC%D0%BE%D1%80%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BA%D1%80%D0%B0%D0%B9%2C%20692760!5e0!3m2!1sru!2sru!4v1618560779283!5m2!1sru!2sru"
-  allowFullScreen
-></iframe>
 
-
-
-
-
-
-  </div>
-  
-  <div className="chat-buttons-container">
+  <div className="footer-social">
     <button className="whatsapp-button" onClick={openWhatsApp}>
       <img src="whatsapp.png" alt="WhatsApp" width="50" height="50"/>
     </button>
@@ -333,10 +292,25 @@ const HomePage = () => {
       <img src="telegram.png" alt="Telegram" width="50" height="50"/>
     </button>
   </div>
-</footer>
+
+
+ 
+  <div id="map" title="Google Maps">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2243.671016430014!2d132.16845386443538!3d43.35311202341276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fb3b1bbffd254eb%3A0xac4f4d7bc7fb8395!2s%D0%90%D0%B2%D1%82%D0%BE%D0%B2%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB!5e0!3m2!1sen!2see!4v1619460189113!5m2!1sen!2see" 
+    width="600" 
+    height="450" 
+    style={{ border: '0' }} 
+    allowFullScreen="" 
+    loading="lazy"
+    title="Google Maps">
+  </iframe>
 </div>
 
 
+</footer>
+
+</div>
 
   );
 };

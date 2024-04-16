@@ -9,7 +9,9 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.5s ease-in-out; /* Анимация появления */
 }
-
+.mortgage-calculator{
+  margin-top: 140px;
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
