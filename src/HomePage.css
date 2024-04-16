@@ -245,7 +245,7 @@
 }
 .footer {
   background-image: url('./1.jpeg');
-  color: white;
+  color: rgba(29, 23, 23, 0.733);
   padding: 50px 0;
   display: flex;
   justify-content: space-between;
@@ -278,7 +278,7 @@
 
 .footer-social {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 
