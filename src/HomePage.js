@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './HomePage.css';
 import Oprosnik from './oprosnik';
 import Straniza from './Straniza';
-
 
 
 
@@ -272,28 +272,28 @@ const HomePage = () => {
         <h4>ATARI</h4>
  
    <div> 
-  <ul>
-    <li>
-      <a href="/search" className="footer-link">
-        <button className="footer-button">О компании</button>
-      </a>
-    </li>
-    <li>
-      <a href="property/:id" className="footer-link">
-        <button className="footer-button">Контакты</button>
-      </a>
-    </li>
-    <li>
-      <a href="mortgage" className="footer-link">
-        <button className="footer-button">Дома</button>
-      </a>
-    </li>
-    <li>
-      <a href="real-estate-catalog" className="footer-link">
-        <button className="footer-button">Новостройки</button>
-      </a>
-    </li>
-  </ul>
+   <ul>
+        <li>
+          <Link to="/" className="footer-link">
+            <button className="footer-button">О компании</button>
+          </Link>
+        </li>
+        <li>
+          <Link to="/property/:id" className="footer-link">
+            <button className="footer-button">Контакты</button>
+          </Link>
+        </li>
+        <li>
+          <Link to="/homepage-catalog" className="footer-link">
+            <button className="footer-button">Дома</button>
+          </Link>
+        </li>
+        <li>
+          <Link to="/real-estate-catalog" className="footer-link">
+            <button className="footer-button">Новостройки</button>
+          </Link>
+        </li>
+      </ul>
 </div>
 </div>  
 
