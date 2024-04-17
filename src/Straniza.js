@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './Straniza.css'; // Подключаем файл стилей для третьего блока
 import './ThirdBlock.css'; // Подключаем файл стилей для третьего блока
 
-
 const Straniza = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [maxHeight, setMaxHeight] = useState('auto'); // Стейт для максимальной высоты блоков
@@ -18,7 +17,6 @@ const Straniza = () => {
 
   const images = ['desktop-1.jpg', 'desktop-2.jpg', 'desktop-3.jpg']; // Путь к изображениям
 
-
   // Функция для автоматической смены изображений с интервалом
   useEffect(() => {
     const interval = setInterval(() => {
@@ -27,7 +25,12 @@ const Straniza = () => {
   
     return () => clearInterval(interval); // Очистка интервала при размонтировании компонента
   }, [images.length]); // Добавлен images.length в зависимости
-  
+
+  const handleButtonClick = () => {
+    // Действие при клике на кнопку
+    console.log('Button clicked!');
+  };
+
   return (
     <div className="container">
       {/* Первый блок */}
@@ -37,33 +40,29 @@ const Straniza = () => {
         <div className="FormContainer">
           <p>от 0,1%</p>
           <Link to="/mortgage">
-  <button>Калькулятор</button>
-</Link>
-</div>
-</div>
- {/* Третий блок */}
- <div className="container" style={{ maxHeight: maxHeight }}>
+            <button>Калькулятор</button>
+          </Link>
+        </div>
+      </div>
+      
+      {/* Третий блок */}
+      <div className="container" style={{ maxHeight: maxHeight }}>
         {/* Выводим текущее изображение с помощью индекса */}
         <div className="background-image" style={{ backgroundImage: `url(${images[currentImageIndex]})` }}>
           <h3 className="bottom-center-heading">ИНДИВИДУАЛЬНОЕ ЖИЛИЩНОЕ СТРОИТЕЛЬСТВО</h3>
-        
         </div>
       </div>
     
       <div className="second-block">
-  <h2>НОВОСТРОЙКИ</h2>
-  <p>Мы ведем полный цикл сделки, помогаем с подбором и получением ипотеки.</p>
-  
-  <img src="./market.png" alt="РЫНОК ВТОРИЧНОГО ЖИЛЬЯ" className="market-image" style={{ width: '50px', height: '50px', float: 'right'}} />
-  <Link to="/real-estate-catalog">
-  <button className="secondary-button">Каталог</button>
-</Link>
-
-
-</div>
-</div>
-
-     
+        <h2>НОВОСТРОЙКИ</h2>
+        <p>Мы ведем полный цикл сделки, помогаем с подбором и получением ипотеки.</p>
+        
+        <img src="./market.png" alt="РЫНОК ВТОРИЧНОГО ЖИЛЬЯ" className="market-image" style={{ width: '50px', height: '50px', float: 'right'}} />
+        <Link to="/real-estate-catalog">
+          <button className="secondary-button" onClick={handleButtonClick}>Каталог</button>
+        </Link>
+      </div>
+    </div>
   );
 }
 

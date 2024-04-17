@@ -1,15 +1,16 @@
 .container {
+  max-width: 1625px;
   display: flex;
   background-color: #ff9800;
-  justify-content: flex-start;
-  margin: 0 auto;
+  justify-content: space-evenly;
   padding: 30px;
-  align-items: center;
-  align-content: center;
+  align-items: flex-start;
+  align-content: stretch;
   /* margin-top: 10px; */
   margin-right: 10px;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
 }
-
  
 
 
@@ -31,7 +32,12 @@
   color: #333;
   margin-bottom: 1px;
 }
-
+.market-image{
+  margin-top: 90px;
+  width: 50%;
+  height: 50%;
+  float: right;
+}
 .first-block p,
 .second-block p,
 .third-block p {
@@ -43,6 +49,7 @@
 .first-block button,
 .second-block button,
 .third-block button {
+  margin-top: 100px;
   background-color: #1575d4;
   color: #fff;
   border: none;
@@ -157,6 +164,7 @@
 }
 
 .second-block p {
+  margin-top: 80px;
   font-size: 18px;
   color: #666;
   margin-bottom: 20px;

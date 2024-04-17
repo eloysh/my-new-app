@@ -7,7 +7,8 @@ import Menu from './Menu';
 import MortgageCalculator from './MortgageCalculator';
 import RealEstateCatalog from './RealEstateCatalog';
 import MortgageDescription  from './MortgageDescription.js'; // Включаем страницу ипотеки здесь
-import  Homepagecatalog from './homepagecatalog.js'
+import Homepagecatalog from './homepagecatalog.js';
+
 ReactDOM.render(
   <Router>
     <div>

@@ -1,11 +1,41 @@
-/* Основные стили */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+.container{
+    max-width: 1625px;
 }
+  
 
+  /* Стили для заголовков */
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 120px;
+    font-weight: bold;
+    color: #009688;
+  }
+  
+  /* Стили для кнопок */
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Стили для ссылок */
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
 
 .step {
     display: none;
@@ -273,6 +303,7 @@ input[type="radio"] {
     }
 }
 .step-content {
+    max-width: 1200px;
     display: flex; /* Используем flexbox для распределения элементов */
     flex-wrap: wrap; /* Позволяем элементам переноситься на следующую строку */
     justify-content: space-between; /* Распределяем элементы равномерно с промежутками между ними */

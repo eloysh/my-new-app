@@ -6,13 +6,6 @@ import propertiesData from './propertiesData'; // Проверьте путь к
 import './RealEstateCatalog.css';
 
 const RealEstateCatalog = () => {
- 
-
-  
-   
-   
-   
- 
   const [selectedProperty, setSelectedProperty] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const [imageIndex, setImageIndex] = useState(0);
@@ -52,9 +45,7 @@ const RealEstateCatalog = () => {
           onNextImage={handleNextImage}
         />
       )}
-      
     </div>
-    
   );
 };
 

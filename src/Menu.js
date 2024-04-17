@@ -21,9 +21,11 @@ const Menu = () => {
 
   const closeMobileMenu = () => {
     setShowMobileMenu(false);
-    setMenuHeight('0px');
+    setTimeout(() => {
+      setMenuHeight('0px');
+    }, 300); // Задержка в 300 миллисекунд (значение должно соответствовать времени анимации в миллисекундах)
   };
-
+  
   return (
     <div>
       <Link to="/" onClick={closeMobileMenu}>

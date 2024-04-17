@@ -1,0 +1,77 @@
+.construction-details-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+ 
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 90%; /* Ширина модального окна на мобильных устройствах */
+    max-height: 90%; /* Максимальная высота модального окна на мобильных устройствах */
+    overflow: auto;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .property-info {
+    margin-top: 20px;
+  }
+  
+  .property-info p {
+    color: white;
+    text-align: center;
+}
+  
+  .gallery {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Высота галереи на мобильных устройствах */
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .prev-btn,
+  .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .prev-btn {
+    left: 10px;
+  }
+  
+  .next-btn {
+    right: 10px;
+  }
+  

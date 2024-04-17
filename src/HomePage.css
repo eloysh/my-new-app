@@ -1,320 +1,33 @@
-.homepage-container {
-  max-width: 1200px;
-
-  padding: 20px;
-}
-
-.homepage-heading {
-  margin-top: 150px;
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 30px;
-}
-
-.property-list {
-  top: 100px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.property-card {
-  width: calc(33.33% - 20px); /* Ширина каждой карточки будет 33.33% от ширины родительского контейнера минус внешние отступы */
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  padding: 20px;
-}
 
 
 
-
-.property-card img {
-  flex-grow: 1; /* Растягиваем изображение на всю доступную высоту */
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  margin-top: 10px;
-}
-
-.property-card h3 {
-  margin-top: 0;
-  font-size: 20px;
-  color: #333;
-}
-
-.property-card p {
-  color: #666;
-}
-
-.property-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-
-
-
-.modal-content {
-  opacity: 1;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  position: relative;
-  max-width: 50%;
-  overflow-y: auto;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-}
-
-.close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.gallery {
-  position: relative;
-}
-
-.gallery img {
-  width: 60%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.prev-btn, .next-btn {
-  position: absolute;
-  transform: translateY(-50%);
-  background-color: #9E9E9E;
-  border: none;
-  font-size: 20px;
-  color: #333;
-  cursor: pointer;
-  padding: 10px;
-  /* border-radius: 50%; */
-  transition: background-color 0.3s;
-}
-
-.prev-btn:hover,
-.next-btn:hover {
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-.prev-btn {
-  left: 5%; /* Позиционирование стрелочки влево */
-  transform: translate(-50%, -50%); /* Корректировка позиции стрелочки */
-}
-
-.next-btn {
-  right: 5%; /* Позиционирование стрелочки вправо */
-  transform: translate(50%, -50%); /* Корректировка позиции стрелочки */
-}
-
-
-.property-info {
-  margin-top: 20px;
-}
-
-.tabs {
-  display: grid;
-  justify-content: start;
-  margin-bottom: 20px;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: stretch;
-  align-items: center;
-  justify-items: stretch;
-}
-
-.tabs button {
-  background-color: #ccc;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.tabs button.active {
-  background-color: #333;
-  color: #fff;
-}
-
-.buy-btn {
-  background-color: #4caf50;
-  border: none;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  display: block;
-  margin-top: 20px;
-}
-
-.buy-btn:hover {
-  background-color: #45a049;
-}
-
-/* Для мобильных устройств */
-@media only screen and (max-width: 844px) {
-  .modal-content {
-   
-    top: 0;
-    width: 90%;
-    max-width: 80%;
-}
-  .property-cards {
-    
-      /* width: calc(120% - 3px); */
-      display: inline-flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      align-content: space-around;
-      justify-content: space-between;
-      align-items: center;
-      justify-items: center;
-  }
-  
-
-  .property-card {
-    width: 90%; /* Показывать карточки на всю ширину экрана */
-  }
-
-
-
-  .close {
-    font-size: 20px; /* Уменьшение размера кнопки закрытия */
-  }
-
-  .gallery img {
-    width: 90%; /* Уменьшение размера изображения галереи */
-  }
-
-  .prev-btn,
-  .next-btn {
-    font-size: 16px; /* Уменьшение размера кнопок переключения */
-    padding: 8px; /* Уменьшение отступов кнопок */
-  }
-
-  .property-info {
-    margin-top: 10px; /* Уменьшение верхнего отступа информации о недвижимости */
-  }
-
-  .tabs {
-    flex-direction: column; /* Отображение вкладок в столбец */
-    align-items: center; /* Выравнивание вкладок по центру */
-  }
-
-  .tabs button {
-    margin-bottom: 10px; /* Добавление отступа между вкладками */
-  }
-}
-@media only screen and (min-width: 845px) {
-  .property-card {
-    display: inline-block; /* Отображаем карточки в строчку */
-    width: calc(33.33% - 20px); /* Устанавливаем равную ширину с учетом отступов */
-    margin-right: 20px; /* Добавляем правый отступ между карточками */
-    margin-bottom: 120px; /* Отступ снизу для карточек */
-    vertical-align: top; /* Выравниваем по верхнему краю */
-    box-sizing: border-box; /* Учитываем padding и border в расчете ширины */
-  }
-}
-.menu-container.active {
-  z-index: 1001; /* Higher z-index to bring it to the forefront */
-}
-
-/* Your existing CSS styles */
-.modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #779dc826;
-  z-index: 1000; /* Lower z-index for the modal */
-}
-.hamburger-menu.active {
-  z-index: 2001; /* Higher z-index to bring it to the forefront */
-}
 .footer {
 
-  background-image: url('./1.jpeg');
-  color: rgba(29, 23, 23, 0.733);
-  padding: 50px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
-.footer-contact,
-.footer-menu,
-.footer-social {
-  flex: 1;
-  margin: 0 20px;
-}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
 
-.footer-contact h3,
-.footer-menu h4 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
+  .header {
+    padding: 10px;
+  }
 
-.footer-contact p,
-.footer-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+  .navbar {
+    padding: 5px;
+  }
 
-.footer-menu li {
-  margin-bottom: 5px;
-}
+  .navbar ul li {
+    display: block;
+    margin: 10px 0;
+  }
 
-.footer-social {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.footer-social button {
-  background-color: transparent;
-  border: none;
-  margin: 10px 0;
-  cursor: pointer;
-}
-
-.footer-social button img {
-  width: 50px;
-  height: 50px;
-}
-
-.footer-social button img:hover {
-  filter: brightness(1.2);
-}
-
-@media only screen and (max-width: 768px) {
   .footer {
-    background-image: url('./2.jpg');
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-contact,
-  .footer-menu,
-  .footer-social {
-    margin: 20px 0;
-    text-align: center;
-  }
-
-  .footer-contact p,
-  .footer-menu ul {
-    margin-top: 10px;
+    padding: 10px;
   }
 }

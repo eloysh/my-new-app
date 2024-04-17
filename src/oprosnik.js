@@ -18,6 +18,11 @@ function Oprosnik({ formData }) {
     const [progressPercentage, setProgressPercentage] = useState(0);
     const [hasLand, setHasLand] = useState(null);
 
+
+    
+
+    
+    
     const handleLandChange = (event) => {
         setHasLand(event.target.value === 'yes');
     };
@@ -142,7 +147,7 @@ function Oprosnik({ formData }) {
         );
     };
     return (
-        <div>
+        <div className="oprosnik-container">
 
             {isFormSubmitted ? (
                 <div>В ближайшее время с вами свяжутся!</div>
