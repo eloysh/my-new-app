@@ -21,15 +21,15 @@
     /* position: relative; */
 }
 .bottom-center-heading {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
   margin-top: 180px;
   background-color: #00000080;
   position: relative;
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #EFEBE9;
 }
   @media screen and (max-width: 768px) {
