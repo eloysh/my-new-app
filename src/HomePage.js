@@ -314,15 +314,8 @@ const HomePage = () => {
 
 
  
-  <div id="map" title="Google Maps" style={{ width: '300px' }}>
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2243.671016430014!2d132.16845386443538!3d43.35311202341276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fb3b1bbffd254eb%3A0xac4f4d7bc7fb8395!2s%D0%90%D0%B2%D1%82%D0%BE%D0%B2%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB!5e0!3m2!1sen!2see!4v1619460189113!5m2!1sen!2see" 
-    style={{ border: '0' }} 
-    allowFullScreen="" 
-    loading="lazy"
-    title="Google Maps">
-  </iframe>
-</div>
+
+
 
 
 

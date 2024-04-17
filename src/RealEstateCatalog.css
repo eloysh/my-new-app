@@ -1,20 +1,11 @@
 
-@media screen and (max-width: 600px) {
-  .property-list .property-card {
-    margin-bottom: 90px;
-    width: calc(50% - 10px); /* При ширине экрана до 600px отображаем карточки по две в ряд */
-  }
-}
-.real-estate-catalog{
-  margin-top: 200px;}
-
 @media (max-width: 800px) {
   .construction-details-modal {
     color: black;
     height: 100%;
     width: 100%;
     top: 50%;
-    left: 0;
+    left: 100px;
     transform: translate(0, -50%);
     padding: 20px;
     border-radius: 8px;

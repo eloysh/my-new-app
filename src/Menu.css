@@ -78,8 +78,9 @@
 
 /* Menu.css */
 .menu-logo {
+  width: 230px;
   margin-top: auto;
-  position: fixed;
+
   top: 10px;
   left: 10px;
   z-index: 1;

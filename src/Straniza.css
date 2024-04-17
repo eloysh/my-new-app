@@ -94,6 +94,7 @@
 }
 
 .first-block h2 {
+  margin: 10px;
   font-size: 24px;
   color: #333;
   margin-bottom: 10px;
@@ -144,6 +145,7 @@
 }
 
 .second-block h2 {
+  margin: 10px;
   font-size: 24px;
   color: #3235df;
   margin-bottom: 10px;
@@ -182,7 +184,7 @@
 }
 
 .first-block {
-  background-image: url('./13.jpg');
+  background-image: url(./13.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -190,18 +192,17 @@
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 280px;
-  height: 306px;
+  height: 450px;
 }
 
 .second-block {
-  height: 306px;
+  height: 450px;
   width: 280px;
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease;
-  background-image: url('./41.png');
+  background-image: url(./41.png);
 }
-
 .background-image {
 
  

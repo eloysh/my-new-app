@@ -11,13 +11,15 @@
   }
   
   .background-image {
-   top: 70px;
+    width: 430px;
+    height: 200px;
+    top: 70px;
     background-size: cover;
     background-position: center;
     border-radius: 8px;
     overflow: hidden;
-    position: relative;
-  }
+    /* position: relative; */
+}
   .bottom-center-heading {
     position: absolute;
     bottom: 10px;
@@ -71,12 +73,13 @@
 @media screen and (max-width: 768px){
 
   .second-block {
+    /* margin: 10px; */
     top: 60px;
     width: 280px;
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease;
-    background-image: url(41.png);
-    height: 260px;
-  }
+    background-image: url(./41.png);
+    height: 230px;
+}
   }

@@ -1,11 +1,11 @@
 .homepage-container {
   max-width: 1200px;
-  margin: 0 auto;
+
   padding: 20px;
 }
 
 .homepage-heading {
-  margin-top: 200px;
+  margin-top: 150px;
   text-align: center;
   font-size: 24px;
   margin-bottom: 30px;
@@ -244,6 +244,7 @@
   z-index: 2001; /* Higher z-index to bring it to the forefront */
 }
 .footer {
+
   background-image: url('./1.jpeg');
   color: rgba(29, 23, 23, 0.733);
   padding: 50px 0;

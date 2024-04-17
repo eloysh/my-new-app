@@ -19,9 +19,14 @@ const Menu = () => {
     });
   };
 
+  const closeMobileMenu = () => {
+    setShowMobileMenu(false);
+    setMenuHeight('0px');
+  };
+
   return (
     <div>
-      <Link to="/" onClick={toggleMobileMenu}>
+      <Link to="/" onClick={closeMobileMenu}>
         <img src={logoImage} alt="Логотип" className="menu-logo" />
       </Link>
       <div className={`hamburger-menu ${showMobileMenu ? 'active' : ''}`} onClick={toggleMobileMenu}>
@@ -31,11 +36,31 @@ const Menu = () => {
       </div>
       <nav className={`menu-container ${showMobileMenu ? 'active' : ''}`} style={{ height: menuHeight }}>
         <ul>
-          <li><Link to="/" onClick={(event) => { toggleMobileMenu(); scrollToTop(); }} className="menu-link">Главная</Link></li>
-          <li><Link to="/real-estate-catalog" onClick={(event) => { toggleMobileMenu(); scrollToTop(); }} className="menu-link">Новостройки</Link></li>
-          <li><Link to="/homepage-catalog" onClick={(event) => { toggleMobileMenu(); scrollToTop(); }} className="menu-link">Дома от застройщиков</Link></li>
-          <li><Link to="/mortgage-program" onClick={(event) => { toggleMobileMenu(); scrollToTop(); }} className="menu-link">Ипотека</Link></li>
-          <li><Link to="/mortgage" onClick={(event) => { toggleMobileMenu(); scrollToTop(); }} className="menu-link">Калькулятор</Link></li>
+          <li>
+            <Link to="/" className="menu-link" onClick={() => { scrollToTop(); closeMobileMenu(); }}>
+              Главная
+            </Link>
+          </li>
+          <li>
+            <Link to="/real-estate-catalog" className="menu-link" onClick={() => { scrollToTop(); closeMobileMenu(); }}>
+              Новостройки
+            </Link>
+          </li>
+          <li>
+            <Link to="/homepage-catalog" className="menu-link" onClick={() => { scrollToTop(); closeMobileMenu(); }}>
+              Дома от застройщиков
+            </Link>
+          </li>
+          <li>
+            <Link to="/mortgage-program" className="menu-link" onClick={() => { scrollToTop(); closeMobileMenu(); }}>
+              Ипотека
+            </Link>
+          </li>
+          <li>
+            <Link to="/mortgage" className="menu-link" onClick={() => { scrollToTop(); closeMobileMenu(); }}>
+              Калькулятор
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>
