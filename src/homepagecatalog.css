@@ -154,14 +154,15 @@
     }
   
     .close {
-      font-size: 20px;
-      top: 5px;
-      right: 5px;
+        color: red;
+        font-size: 20px;
+        top: 5px;
+        right: 5px;
     }
     .modal-content {
         width: 400px;
         height: 720px;
-        background-color: #000000ba;
+        background-color: #3f5eb5d4;
         border-radius: 10px;
     }
     .property-info {

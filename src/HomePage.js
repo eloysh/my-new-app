@@ -57,26 +57,23 @@ const HomePage = () => {
               <div className="footer-menu">
                 <h4>ATARI</h4>
                 <ul>
-                  <li>
+                 
                     <Link to="/" className="footer-link">
                       <Button variant="outline-dark">О компании</Button>
                     </Link>
-                  </li>
-                  <li>
+               
                     <Link to="/property/:id" className="footer-link">
                       <Button variant="outline-dark">Контакты</Button>
                     </Link>
-                  </li>
-                  <li>
+               
                     <Link to="/homepage-catalog" className="footer-link">
                       <Button variant="outline-dark">Дома</Button>
                     </Link>
-                  </li>
-                  <li>
+                  
                     <Link to="/real-estate-catalog" className="footer-link">
                       <Button variant="outline-dark">Новостройки</Button>
                     </Link>
-                  </li>
+               
                 </ul>
               </div>
             </Col>

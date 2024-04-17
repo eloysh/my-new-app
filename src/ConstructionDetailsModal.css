@@ -9,7 +9,10 @@
     justify-content: center;
     align-items: center;
   }
-  
+  button:before {
+    opacity: .75;
+    color: #ea0e0e;
+}
   .modal-content {
  
     background-color: white;

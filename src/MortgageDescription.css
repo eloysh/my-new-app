@@ -16,7 +16,7 @@
   
   h2 {
     margin-top: 150px;
-    color: #FF5722;
+    color: #212122;
   }
   
   h3 {
@@ -24,10 +24,17 @@
   }
   
   ul {
+    padding: 10px;
+    display: flex;
     list-style-type: disc;
     margin-left: 20px;
-  }
-  
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-items: stretch;
+    justify-content: space-evenly;
+}
   p {
     line-height: 1.6;
   }

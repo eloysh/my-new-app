@@ -41,6 +41,10 @@ const ConstructionDetailsModal = ({ property, onClose }) => {
               <img src={image} alt={property.title} style={imageStyle} />
             </div>
           ))}
+           <div>
+        <img src="1.jpg" alt="Slide 1" style={imageStyle} />
+    
+      </div>
         </Slider>
         <div className="property-info">
           <p>Буден сдан: II квартал 2024 года {property.status}</p>
