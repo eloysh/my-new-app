@@ -13,6 +13,7 @@
     opacity: .75;
     color: #ea0e0e;
 }
+
   .modal-content {
  
     background-color: white;
@@ -40,7 +41,7 @@
   }
   
   .property-info p {
-    color: white;
+    color: #0d0c0ccc;
     text-align: center;
 }
   
@@ -77,4 +78,3 @@
   .next-btn {
     right: 10px;
   }
-  

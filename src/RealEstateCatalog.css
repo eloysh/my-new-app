@@ -2,7 +2,12 @@
   max-width: 1200px;
 
 }
-
+.img{
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
 .property-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

@@ -5,11 +5,12 @@
   }
   
   .homepage-heading {
+    color: black;
     margin-top: 120px;
     text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
+    /* font-size: 24px; */
+    /* margin-bottom: 20px; */
+}
   
   .property-list {
    
@@ -20,10 +21,15 @@
   .property-cards {
     display: flex;
     flex-wrap: wrap;
-  }
+    align-items: flex-start;
+    justify-content: space-evenly;
+    align-content: space-between;
+    flex-direction: row;
+}
   
   .property-card {
-    background-color: #9E9E9E;
+    text-align: center;
+    background-color: #e4d8d8;
     width: 300px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
@@ -58,11 +64,10 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
   }
-  
   .modal-content {
     width: 800px;
-    height: 800px;
-    background-color: #000000ba;
+    height: 650px;
+    background-color: #abb2bac2;
     border-radius: 10px;
     padding: 20px;
     /* max-width: 80%; */
@@ -84,11 +89,11 @@
   }
   
   .gallery img {
- 
+    margin-left: 40px;
     max-width: 87%;
     height: auto;
     border-radius: 10px;
-  }
+}
   
   .prev-btn,
   .next-btn {
@@ -102,7 +107,7 @@
     cursor: pointer;
   }
   .property-card h3 {
-    color: white;
+    color: #020202;
   }
   
   .prev-btn {
@@ -123,7 +128,7 @@
   }
   
   .tabs button {
-    background-color: transparent;
+    background-color: #00000021;
     border: none;
     padding: 5px 10px;
     margin-right: 10px;
@@ -136,7 +141,8 @@
   }
   
   .buy-btn {
-    background-color: #009688;
+   
+    background-color: #05602a;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -151,7 +157,23 @@
      
       margin-bottom: 20px;
     }
-  
+    .buy-btn {
+    
+      background-color: #05602a;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: block;
+      margin-top: 20px;
+  }
+    .gallery img {
+      margin-left: 20px;
+      max-width: 87%;
+      height: auto;
+      border-radius: 10px;
+  }
     .modal-content {
       width: 90%;
       height: auto;
@@ -160,21 +182,27 @@
     }
   
     .close {
-        color: rgb(243, 236, 236);
+        color: rgb(8 8 8);
         font-size: 20px;
         top: 5px;
         right: 5px;
     }
     .modal-content {
-        width: 400px;
-        height: 720px;
-      
-        border-radius: 10px;
-    }
+      background-color: white;
+      width: 400px;
+      height: 570px;
+      border-radius: 10px;
+  }
     .property-info {
+      display: flex;
       color: #ccc;
-        margin-top: 0px; /* Уменьшаем верхний отступ */
-      }
+      margin-top: 0px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: stretch;
+      justify-content: space-between;
+      align-items: stretch;
+  }
   }
   .property-card h3 {
     margin-bottom: 10px; /* Или другое значение отступа, которое вам нужно */
