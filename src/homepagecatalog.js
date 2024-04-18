@@ -1,4 +1,4 @@
-import React, { useState, } from 'react';
+import React, { useState } from 'react';
 import './homepagecatalog.css';
 
 const Homepagecatalog = () => {
@@ -8,92 +8,68 @@ const Homepagecatalog = () => {
   const [activeTab, setActiveTab] = useState('characteristics'); // Default active tab
 
   const properties = [
-    
-
-  {
-    id: 1,
-    title: 'Проект "ИНДИГО"',
-    description: 'Блочный дом',
-    price: ' 6 555 568 рублей',
-    location: 'Приморский край',
-    squaremeter: '162 кв.м',
-    description2: 'Застройщик акредитован, ипотека Сбербанк, Дом РФ, Маткапитал подходит.',
-    images: ['/House_1.jpg', '/House_2.jpg', '/House_3.jpg', '/House_4.jpg'],
-    characteristics: 'Характеристики: монолитная плита, стены-газаблок 300 мм, перекрытие монолитное, лестница, монолитная, кровельный материал(гибкая черепица "SHINGALS") ',
-    projectComposition: 'Жилая полощадь: 144 кв.м, Общая площадь: 162 кв.м.',
-    payment: 'Оплата: Ипотека, Дом РФ, Маткапитал',
-    terms: 'Сроки: 3 месяца'
-  },
-  {
-    id: 2,
-    title: 'Сакура',
-    description: 'Блочный дом',
-    price: '7 259 663 рублей',
-    location: 'Приморский край',
-    squaremeter: '120 кв.м',
-    description2: 'Застройщик акредитован, ипотека Сбербанк, Дом РФ, Маткапитал подходит, строительство дома без первоначального взноса, срок строительства: коробка дома - 3 месяца, White box - 6 месяцев, подготовка участка и фасад - считаются индивидуально',
-    images: ['/apartment-1.jpg', '/apartment-2.jpg', '/apartment-3.jpg', '/apartment-4.jpg'],
-    characteristics: 'Характеристики: Блочный дом, Приморский край, 120 кв.м',
-    projectComposition: 'Состав проекта: X, Y, Z',
-    payment: 'Оплата: Ипотека, Дом РФ, Маткапитал',
-    terms: 'Сроки: 6 месяцев'
-  },
-  {
-    id: 3,
-    title: 'Дом на берегу озера',
-    description: 'Коттедж с видом на озеро',
-    price: '12 500 000 рублей',
-    location: 'Ленинградская область',
-    squaremeter: '200 кв.м',
-    description2: 'Прекрасный вид, собственный пляж',
-    images: ['/apartment-5.jpg', '/apartment-6.jpg', '/apartment-7.jpg', '/apartment-4.jpg'],
-    characteristics: 'Характеристики: Коттедж, Ленинградская область, 200 кв.м',
-    projectComposition: 'Состав проекта: Планировка A, B, C',
-    payment: 'Оплата: Ипотека, Дом РФ, Маткапитал',
-    terms: 'Сроки: 9 месяцев'
-  },
-  {
-    id: 4,
-    title: 'Дом на берегу озера',
-    description: 'Коттедж с видом на озеро',
-    price: '12 500 000 рублей',
-    location: 'Ленинградская область',
-    squaremeter: '200 кв.м',
-    description2: 'Прекрасный вид, собственный пляж',
-    images: ['/apartment-5.jpg', '/apartment-6.jpg', '/apartment-7.jpg', '/apartment-4.jpg'],
-    characteristics: 'Характеристики: Коттедж, Ленинградская область, 200 кв.м',
-    projectComposition: 'Состав проекта: Планировка A, B, C',
-    payment: 'Оплата: Ипотека, Дом РФ, Маткапитал',
-    terms: 'Сроки: 9 месяцев'
-  },
-  {
-    id: 5,
-    title: 'Дом на берегу озера',
-    description: 'Коттедж с видом на озеро',
-    price: '12 500 000 рублей',
-    location: 'Ленинградская область',
-    squaremeter: '200 кв.м',
-    description2: 'Прекрасный вид, собственный пляж',
-    images: ['/apartment-5.jpg', '/apartment-6.jpg', '/apartment-7.jpg', '/apartment-4.jpg'],
-    characteristics: 'Характеристики: Коттедж, Ленинградская область, 200 кв.м',
-    projectComposition: 'Состав проекта: Планировка A, B, C',
-    payment: 'Оплата: Ипотека, Дом РФ, Маткапитал',
-    terms: 'Сроки: 9 месяцев'
-  },
-  {
-    id: 6,
-    title: 'Дом на берегу озера',
-    description: 'Коттедж с видом на озеро',
-    price: '12 500 000 рублей',
-    location: 'Ленинградская область',
-    squaremeter: '200 кв.м',
-    description2: 'Прекрасный вид, собственный пляж',
-    images: ['/apartment-5.jpg', '/apartment-6.jpg', '/apartment-7.jpg', '/apartment-4.jpg'],
-    characteristics: 'Характеристики: Коттедж, Ленинградская область, 200 кв.м',
-    projectComposition: 'Состав проекта: Планировка A, B, C',
-    payment: 'Оплата: Ипотека, Дом РФ, Маткапитал',
-    terms: 'Сроки: 9 месяцев'
-  },
+    {
+      id: 1,
+      title: 'Проект "МАГНАТ"',
+      description: 'Блочный дом',
+      price: ' 3 938 058 млн руб',
+      location: 'Приморский край',
+      squaremeter: '69 кв.м',
+      images: ['/House-1.png', '/House-1_1.png', '/House-1_2.png', '/House-1_3.png'],
+      characteristics: 'Характеристики: монолитная плита, стены-газаблок 300 мм, перекрытие монолитное, лестница, монолитная, кровельный материал(гибкая черепица "SHINGALS") ',
+      projectComposition: 'Жилая площадь: 58 кв.м, Общая площадь: 69 кв.м.',
+      payment: 'Оплата: Наличные средства, ипотека, можно маткапитал, застройщик акредитованный',
+      terms: 'Сроки: Коробка дома - 3 месяца, White box - 6 месяцев',
+      whiteBoxPrice: '5 659 358 млн руб',
+      option: 'Окна 58 профиль, тройной стеклопакет , дверь -337 900 руб,Гипсовая штукатурка стен - 321 400 руб,Распределительный щит с внутренней электропроводкой 230 200 руб, Биологическая станция - 350 00 руб, Устройство теплого пола с электрокотлом, разводка воды , канализации , стяжка пола - 480 000 руб.'
+    },
+   
+    {
+      id: 2,
+      title: 'Проект "ТУХАС"',
+      description: 'Блочный дом',
+      price: ' 3 859 034 млн руб',
+      location: 'Приморский край',
+      squaremeter: '72 кв.м',
+      images: ['/House_2.png', '/House_2_2.png', '/House_2_3.png', '/House_2_4.png'],
+      characteristics: 'Характеристики: монолитная плита, стены-газаблок 300 мм, перекрытие монолитное, лестница, монолитная, кровельный материал(гибкая черепица "SHINGALS") ',
+      projectComposition: 'Жилая площадь: 63 кв.м, Общая площадь: 72 кв.м.',
+      payment: 'Оплата: Наличные средства, ипотека, можно маткапитал, застройщик акредитованный',
+      terms: 'Сроки: Коробка дома - 3 месяца, White box - 6 месяцев',
+      whiteBoxPrice: '5 755 824 млн руб',
+      option: 'Окна 58 профиль, тройной стеклопакет , дверь -414 950 руб,Гипсовая штукатурка стен - 319 840 руб,Распределительный щит с внутренней электропроводкой 232 000 руб, Биологическая станция - 350 00 руб, Устройство теплого пола с электрокотлом, разводка воды , канализации , стяжка пола - 480 000 руб.'
+    },
+    {
+      id: 3,
+      title: 'Проект "ВЕГАС"',
+      description: 'Блочный дом',
+      price: ' 4 487 176 млн руб',
+      location: 'Приморский край',
+      squaremeter: '79 кв.м',
+      images: ['/House-3.png', '/House-3_1.png', '/House-3_2.png', '/House-3_3.png'],
+      characteristics: 'Характеристики: монолитная плита, стены-газаблок 300 мм, перекрытие монолитное, лестница, монолитная, кровельный материал(гибкая черепица "SHINGALS") ',
+      projectComposition: 'Жилая площадь: 73 кв.м, Общая площадь: 79 кв.м.',
+      payment:'Оплата: Наличные средства, ипотека, можно маткапитал, застройщик акредитованный',
+      terms: 'Сроки: 3 месяца, White box - 6 месяцев',
+      whiteBoxPrice: '6 568 846 млн руб',
+      option: 'Окна 58 профиль, тройной стеклопакет , дверь -340 120 руб,Гипсовая штукатурка стен - 447 050 руб,Распределительный щит с внутренней электропроводкой 292 000 руб, Биологическая станция - 350 00 руб, Устройство теплого пола с электрокотлом, разводка воды , канализации , стяжка пола - 652 500 руб.'
+    },
+    {
+      id: 4,
+      title: 'Проект "ЛАЗУРНЫЙ"',
+      description: 'Блочный дом',
+      price: ' 3 798 057 млн руб',
+      location: 'Приморский край',
+      squaremeter: '74 кв.м',
+      images: ['/House-4.png', '/House-4_1.png', '/House-4_2.png', '/House-4_3.png'],
+      characteristics: 'Характеристики: Коробка дома 6Х6, монолитная плита, стены-газаблок 300 мм, внутрение стены 100мм, перекрытие-монолитное, лестница-монолитная, кровельный материал-металлочерепица ',
+      projectComposition: 'Жилая площадь: 74 кв.м, Общая площадь: 74 кв.м.',
+      payment: 'Оплата: Наличные средства, ипотека, можно маткапитал, застройщик акредитованный',
+      terms: 'Сроки: 3 месяца, White box - 6 месяцев',
+      whiteBoxPrice: '5 747 957 млн руб',
+      option: 'Окна 58 профиль, тройной стеклопакет , дверь -340 000 руб,Гипсовая штукатурка стен - 420 700 руб,Распределительный щит с внутренней электропроводкой 325 600 руб, Биологическая станция - 350 00 руб, Устройство теплого пола с электрокотлом, разводка воды , канализации , стяжка пола - 504 600 руб.'
+    },
+    // Другие объекты с данными о свойствах
   ];
 
   const handleTitleClick = (property) => {
@@ -114,11 +90,14 @@ const Homepagecatalog = () => {
     setImageIndex((prevIndex) => (prevIndex + 1) % properties[selectedProperty.id - 1].images.length);
   };
 
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+  };
+
   return (
     <div className="homepage-container">
       <h1 className="homepage-heading">ТОП проектов домов от застройщиков</h1>
       <div className="property-list">
-      
         <div className="property-cards">
           {properties.map(property => (
             <div key={property.id}>
@@ -136,23 +115,26 @@ const Homepagecatalog = () => {
         <div className="modal">
           <div className="modal-content">
             <span className="close" onClick={handleCloseForm}>&times;</span>
+            
             <div className="gallery">
+            <div className="property-info">
+              <h3>{selectedProperty.title}</h3>
+              <div className="tabs">
               <img src={properties[selectedProperty.id - 1].images[imageIndex]} alt="Property" />
+             
               <button className="prev-btn" onClick={handlePrevImage}>{'<'}</button>
               <button className="next-btn" onClick={handleNextImage}>{'>'}</button>
             </div>
-            <div className="property-info">
-              <h3>{selectedProperty.title}</h3>
-              {activeTab === 'characteristics' && <p>{selectedProperty.characteristics}</p>}
-              {activeTab === 'projectComposition' && <p>{selectedProperty.projectComposition}</p>}
-              {activeTab === 'payment' && <p>{selectedProperty.payment}</p>}
-              {activeTab === 'terms' && <p>{selectedProperty.terms}</p>}
-              <div className="tabs">
-                <button className={activeTab === 'characteristics' ? 'active' : ''} onClick={() => setActiveTab('characteristics')}>Характеристики</button>
-                <button className={activeTab === 'projectComposition' ? 'active' : ''} onClick={() => setActiveTab('projectComposition')}>Состав проекта</button>
-                <button className={activeTab === 'payment' ? 'active' : ''} onClick={() => setActiveTab('payment')}>Оплата</button>
-                <button className={activeTab === 'terms' ? 'active' : ''} onClick={() => setActiveTab('terms')}>Сроки</button>
+           
+                <button className={activeTab === 'characteristics' ? 'active' : ''} onClick={() => handleTabClick('characteristics')}>Характеристики</button>
+                <button className={activeTab === 'projectComposition' ? 'active' : ''} onClick={() => handleTabClick('projectComposition')}>Площадь дома</button>
+                <button className={activeTab === 'payment' ? 'active' : ''} onClick={() => handleTabClick('payment')}>Как купить?</button>
+                <button className={activeTab === 'terms' ? 'active' : ''} onClick={() => handleTabClick('terms')}>Сроки строительства</button>
+                <button className={activeTab === 'whiteBoxPrice' ? 'active' : ''} onClick={() => handleTabClick('whiteBoxPrice')}>White box цена</button>
+                <button className={activeTab === 'option' ? 'active' : ''} onClick={() => handleTabClick('option')}>Что входит в White box</button>
               </div>
+             
+              <p>{selectedProperty[activeTab]}</p>
               <button className="buy-btn">Купить проект</button>
             </div>
           </div>
