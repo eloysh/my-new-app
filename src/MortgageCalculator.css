@@ -22,12 +22,14 @@
   }
 }
 .mortgage-calculator{
-  padding: 40px;
+  padding: 10px;
 }
 .form-group {
   margin-bottom: 15px;
 }
-
+.input-group{
+  text-align: center;
+}
 label {
   font-weight: bold;
 }
@@ -43,7 +45,7 @@ input[type="number"] {
 button {
   margin: 5px;
   padding: 10px 10px;
-  background-color: #000000a6;
+  background-color: #0041876b;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -79,9 +81,7 @@ button:hover {
 
 /* Медиа-запросы для адаптивности на мобильных устройствах */
 @media (max-width: 768px) {
-  .calculator-container {
-    padding: 10px;
-  }
+ 
 
   input[type="number"] {
     font-size: 14px;

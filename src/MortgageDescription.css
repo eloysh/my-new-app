@@ -1,13 +1,11 @@
 
-
 .mortgage-program-container {
-    max-width: 800px;
-    margin-top: 140px;
-    padding: 20px;
-  }
+  max-width: 1625px;
+  padding: 20px;
+}
   
   .mortgage-program-section {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
   
   .how-to-apply-section {
@@ -15,13 +13,14 @@
   }
   
   h2 {
-    margin-top: 150px;
+   
     color: #212122;
   }
   
-   h3 {
-      color: #030303;
-  };
+  h3 {
+    margin-top: 20px;
+    color: #030303;
+}
  
   
   ul {

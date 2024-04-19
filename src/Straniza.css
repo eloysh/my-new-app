@@ -33,7 +33,7 @@
   margin-bottom: 1px;
 }
 .market-image{
-  margin-top: 90px;
+ 
   width: 50%;
   height: 50%;
   float: right;
@@ -49,7 +49,7 @@
 .first-block button,
 .second-block button,
 .third-block button {
-  margin-top: 100px;
+  margin-top: 10px;
   background-color: #1575d4;
   color: #fff;
   border: none;
@@ -92,7 +92,7 @@
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 280px;
-  height: 306px;
+  
 }
 
 .first-block:hover {
@@ -200,11 +200,11 @@
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 280px;
-  height: 450px;
+
 }
 
 .second-block {
-  height: 450px;
+
   width: 280px;
   position: relative;
   overflow: hidden;
@@ -241,5 +241,12 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+h1, h2, h3, h4, h5, h6 {
+  /* margin-top: 130px; */
+  top: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: #009688;
 }
 }

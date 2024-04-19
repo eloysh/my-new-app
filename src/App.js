@@ -8,13 +8,15 @@ import HomePage from './HomePage';
 import MortgageDescription from './MortgageDescription';
 import Menu from './Menu';
 import Preloader from './Preloader'; // Import Preloader component
-
+import PrivateRoute from './PrivateRoute';
 const App = () => {
   return (
     <Router>
       <Menu />
       <Suspense fallback={<Preloader />}>
         <Switch>
+        <Route path="/login" component={Login} />
+        <PrivateRoute path="/dashboard" component={Dashboard} />
           <Route exact path="/" component={Straniza} />
           <Route path="/mortgage" component={OtherPage} />
           <Route path="/home" exact component={HomePage} />

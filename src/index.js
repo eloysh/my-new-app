@@ -9,6 +9,8 @@ import RealEstateCatalog from './RealEstateCatalog';
 import MortgageDescription  from './MortgageDescription.js'; // Включаем страницу ипотеки здесь
 import Homepagecatalog from './homepagecatalog.js';
 
+
+
 ReactDOM.render(
   <Router>
     <div>
@@ -19,6 +21,8 @@ ReactDOM.render(
         <Route path="/homepage-catalog" element={< Homepagecatalog />}/>
         <Route path="/real-estate-catalog" element={<RealEstateCatalog />} /> {/* Включаем каталог недвижимости */}
         <Route path="/mortgage-program" element={<MortgageDescription  />} /> {/* Включаем страницу ипотеки */}
+      
+
       </Routes>
     </div>
   </Router>,

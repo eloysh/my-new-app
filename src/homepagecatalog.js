@@ -411,7 +411,7 @@ const Homepagecatalog = () => {
 
   return (
     <div className="homepage-container">
-      <h1 className="homepage-heading">ТОП проектов домов от застройщиков</h1>
+      <h1 className="homepage-heading">Каталог домов</h1>
       <div className="property-list">
         <div className="property-cards">
           {properties.map(property => (
