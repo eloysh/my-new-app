@@ -1,7 +1,6 @@
 .container {
-
+  margin-top: 72px;
   display: flex;
-
   justify-content: space-evenly;
   padding: 30px;
   align-items: flex-start;
@@ -11,7 +10,6 @@
   flex-direction: row-reverse;
   flex-wrap: nowrap;
 }
- 
 
 
 .first-block,
