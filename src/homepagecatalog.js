@@ -6,7 +6,30 @@ const Homepagecatalog = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [imageIndex, setImageIndex] = useState(0);
   const [activeTab, setActiveTab] = useState('characteristics'); // Default active tab
+  const [formData, setFormData] = useState({
+    name: '',
+    phoneNumber: ''
+  });
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
+  const handlePrevImage = () => {
+    if (selectedProperty) {
+      setImageIndex((prevIndex) => (
+        prevIndex === 0
+          ? selectedProperty.images.length - 1
+          : prevIndex - 1
+      ));
+    }
+  };
+  
+  const handleNextImage = () => {
+    if (selectedProperty) {
+      setImageIndex((prevIndex) => (
+        (prevIndex + 1) % selectedProperty.images.length
+      ));
+    }
+  };
+  
   const properties = [
     {
       id: 1,
@@ -397,17 +420,54 @@ const Homepagecatalog = () => {
     setSelectedProperty(null);
   };
 
-  const handlePrevImage = () => {
-    setImageIndex((prevIndex) => (prevIndex === 0 ? properties[selectedProperty.id - 1].images.length - 1 : prevIndex - 1));
-  };
-
-  const handleNextImage = () => {
-    setImageIndex((prevIndex) => (prevIndex + 1) % properties[selectedProperty.id - 1].images.length);
-  };
-
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log('Form submitted:', formData);
+    // Clear form data after submission
+    setFormData({
+      name: '',
+      phoneNumber: ''
+    });
+    setIsFormOpen(false); // Close the form after submission
+  
+    // Call handleSendWhatsApp here to send WhatsApp message
+    handleSendWhatsApp();
+  };
+  
+  const handleBuyProject = () => {
+    setIsFormOpen(true); // Open the form when "Купить проект" button is clicked
+  };
+
+  const handleSendWhatsApp = () => {
+    const message = `Заявка:
+    Имя: ${formData.name}
+    Номер телефона: ${formData.phoneNumber}
+    Информация о свойстве:
+    Название: ${selectedProperty.title}
+    Описание: ${selectedProperty.description}
+    Цена: ${selectedProperty.price}
+    Squaremeter: ${selectedProperty.squaremeter}
+    ${selectedProperty[activeTab]}`;
+  
+    const recipientPhoneNumber = '79841925069'; // Номер WhatsApp, на который будет отправлено сообщение
+    const whatsappLink = `https://api.whatsapp.com/send?phone=${recipientPhoneNumber}&text=${encodeURIComponent(message)}`;
+  
+    window.location.href = whatsappLink;
+  };
+  
 
   return (
     <div className="homepage-container">
@@ -415,51 +475,56 @@ const Homepagecatalog = () => {
       <div className="property-list">
         <div className="property-cards">
           {properties.map(property => (
-             <div key={property.id}>
-             <div className="property-card">
-               <h3 onClick={() => handleTitleClick(property)}>{property.title}</h3>
-               <p>{property.description}</p>
-               <p>Цена: {property.price}</p>
-               <p>{property.squaremeter}</p>
-               <img src={property.images[0]} alt="Property" onClick={() => handleTitleClick(property)} />
-             </div>
+            <div key={property.id}>
+              <div className="property-card">
+                <h3 onClick={() => handleTitleClick(property)}>{property.title}</h3>
+                <p>{property.description}</p>
+                <p>Цена: {property.price}</p>
+                <p>{property.squaremeter}</p>
+                <img src={property.images[0]} alt="Property" onClick={() => handleTitleClick(property)} />
+              </div>
             </div>
           ))}
         </div>
-      
-     
-</div>
-{selectedProperty && isOpen && (
-  <div className="modal">
-    <div className="modal-content">
-      <span className="close" onClick={handleCloseForm}>&times;</span>
-      
-      <div className="gallery">
-        <div className="property-info">
-          <h3>{selectedProperty.title}</h3>
-          <div className="tabs">
-            {selectedProperty.images && selectedProperty.images[imageIndex] && (
-              <img src={selectedProperty.images[imageIndex]} alt="Property" />
-            )}
-            <button className="prev-btn" onClick={handlePrevImage}>{'<'}</button>
-            <button className="next-btn" onClick={handleNextImage}>{'>'}</button>
-          </div>
-         
-          <button className={activeTab === 'characteristics' ? 'active' : ''} onClick={() => handleTabClick('characteristics')}>Характеристики</button>
-          <button className={activeTab === 'projectComposition' ? 'active' : ''} onClick={() => handleTabClick('projectComposition')}>Площадь дома</button>
-          <button className={activeTab === 'payment' ? 'active' : ''} onClick={() => handleTabClick('payment')}>Как купить?</button>
-          <button className={activeTab === 'terms' ? 'active' : ''} onClick={() => handleTabClick('terms')}>Сроки строительства</button>
-          <button className={activeTab === 'whiteBoxPrice' ? 'active' : ''} onClick={() => handleTabClick('whiteBoxPrice')}>White box цена</button>
-          <button className={activeTab === 'option' ? 'active' : ''} onClick={() => handleTabClick('option')}>Что входит в White box</button>
-        </div>
-       
-        <p>{selectedProperty[activeTab]}</p>
-        <button className="buy-btn">Купить проект</button>
       </div>
+      {selectedProperty && isOpen && (
+        <div className="modal">
+          <div className="modal-content">
+            <span className="close" onClick={handleCloseForm}>&times;</span>
+            <div className="gallery">
+              <div className="property-info">
+                <h3>{selectedProperty.title}</h3>
+                <div className="tabs">
+                  {selectedProperty.images && selectedProperty.images[imageIndex] && (
+                    <img src={selectedProperty.images[imageIndex]} alt="Property" />
+                  )}
+                  <button className="prev-btn" onClick={handlePrevImage}>{'<'}</button>
+                  <button className="next-btn" onClick={handleNextImage}>{'>'}</button>
+                </div>
+                <div className="form-container">
+                  {isFormOpen ? (
+                    <form onSubmit={handleSubmit}>
+                      <input type="text" name="name" placeholder="Имя" value={formData.name} onChange={handleInputChange} />
+                      <input type="text" name="phoneNumber" placeholder="Номер телефона" value={formData.phoneNumber} onChange={handleInputChange} />
+                      <button type="submit" className="submit-btn">Отправить</button>
+                    </form>
+                  ) : (
+                    <button className="buy-btn" onClick={handleBuyProject}>Подробнее</button>
+                  )}
+                </div>
+                <button className={activeTab === 'characteristics' ? 'active' : ''} onClick={() => handleTabClick('characteristics')}>Характеристики</button>
+                <button className={activeTab === 'projectComposition' ? 'active' : ''} onClick={() => handleTabClick('projectComposition')}>Площадь дома</button>
+                <button className={activeTab === 'payment' ? 'active' : ''} onClick={() => handleTabClick('payment')}>Как купить?</button>
+                <button className={activeTab === 'terms' ? 'active' : ''} onClick={() => handleTabClick('terms')}>Сроки строительства</button>
+                <button className={activeTab === 'whiteBoxPrice' ? 'active' : ''} onClick={() => handleTabClick('whiteBoxPrice')}>White box цена</button>
+                <button className={activeTab === 'option' ? 'active' : ''} onClick={() => handleTabClick('option')}>Что входит в White box</button>
+              </div>
+              <p>{selectedProperty[activeTab]}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
-  </div>
-)}
-</div>
   );
 };
 

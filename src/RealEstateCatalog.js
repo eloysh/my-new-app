@@ -1,44 +1,43 @@
 import React, { useState } from 'react';
-import ConstructionCard from './ConstructionCard'; // Проверьте путь к этому компоненту
-import ConstructionDetailsModal from './ConstructionDetailsModal'; // Проверьте путь к этому компоненту
-import propertiesData from './propertiesData'; // Проверьте путь к файлу с данными о недвижимости
-
+import ConstructionCard from './ConstructionCard';
+import ConstructionDetailsModal from './ConstructionDetailsModal';
+import propertiesData from './propertiesData';
 import './RealEstateCatalog.css';
 
 const RealEstateCatalog = () => {
-  const [selectedProperty, setSelectedProperty] = useState(null);
+  const [selectedPropertyIndex, setSelectedPropertyIndex] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const [imageIndex, setImageIndex] = useState(0);
 
-  const handleCardClick = (property) => {
-    setSelectedProperty(property);
+  const handleCardClick = (index) => {
+    setSelectedPropertyIndex(index);
     setIsOpen(true);
   };
 
   const handleCloseModal = () => {
-    setSelectedProperty(null);
+    setSelectedPropertyIndex(null);
     setIsOpen(false);
   };
 
   const handlePrevImage = () => {
-    setImageIndex((prevIndex) => (prevIndex === 0 ? selectedProperty.images.length - 1 : prevIndex - 1));
+    setImageIndex((prevIndex) => (prevIndex === 0 ? propertiesData[selectedPropertyIndex].images.length - 1 : prevIndex - 1));
   };
 
   const handleNextImage = () => {
-    setImageIndex((prevIndex) => (prevIndex + 1) % selectedProperty.images.length);
+    setImageIndex((prevIndex) => (prevIndex + 1) % propertiesData[selectedPropertyIndex].images.length);
   };
 
   return (
     <div className="real-estate-catalog">
       <h1>Каталог недвижимости</h1>
       <div className="property-list">
-        {propertiesData.map((property) => (
-          <ConstructionCard key={property.id} property={property} onClick={handleCardClick} />
+        {propertiesData.map((property, index) => (
+          <ConstructionCard key={property.id} property={property} onClick={() => handleCardClick(index)} />
         ))}
       </div>
       {isOpen && (
         <ConstructionDetailsModal
-          property={selectedProperty}
+          property={propertiesData[selectedPropertyIndex]}
           onClose={handleCloseModal}
           imageIndex={imageIndex}
           onPrevImage={handlePrevImage}
