@@ -13,17 +13,77 @@
     opacity: .75;
     color: #ea0e0e;
 }
+/* ConstructionDetailsModal.css */
 
-  .modal-content {
- 
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 90%; /* Ширина модального окна на мобильных устройствах */
-    max-height: 90%; /* Максимальная высота модального окна на мобильных устройствах */
-    overflow: auto;
+.property-info {
+  margin-bottom: 20px; /* Add margin at the bottom */
+}
+
+.property-info p {
+  margin: 5px 0; /* Add margin to paragraphs */
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="tel"],
+button {
+  margin-bottom: 10px; /* Add margin between input fields and button */
+  padding: 8px; /* Add padding to input fields and button */
+  border: 1px solid #ccc; /* Add border to input fields and button */
+  border-radius: 5px; /* Add border radius */
+  font-size: 16px; /* Adjust font size */
+}
+
+input[type="text"],
+input[type="tel"] {
+  width: 100%; /* Set input width to 100% */
+}
+
+button[type="submit"] {
+  background-color: #007bff; /* Change background color */
+  color: #fff; /* Change text color */
+  cursor: pointer; /* Add cursor pointer */
+  transition: background-color 0.3s; /* Add transition effect */
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3; /* Change background color on hover */
+}
+
+@media (max-width: 768px) {
+  /* Adjust form styles for mobile devices */
+  form {
+    padding: 0 20px; /* Add padding to the form */
   }
+
+  input[type="text"],
+  input[type="tel"] {
+    font-size: 14px; /* Reduce font size */
+  }
+}
+
+input[type="text"] {
+  width: 20%;
+  /* padding: 10px; */
+  /* border: 1px solid #ccc; */
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.modal-content {
+  height: 100%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  /* max-height: 90%; */
+  overflow: auto;
+}
   
   .close {
     position: absolute;
@@ -41,13 +101,14 @@
   }
   
   .property-info p {
+    margin-top: 11px;
     color: #0d0c0ccc;
     text-align: center;
 }
   
   .gallery {
     position: relative;
-    width: 100%;
+    width: 80%;
     height: 300px; /* Высота галереи на мобильных устройствах */
   }
   
