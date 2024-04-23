@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './homepagecatalog.css';
+import Config from './config.js';
 
 const Homepagecatalog = () => {
   const [selectedProperty, setSelectedProperty] = useState(null);
@@ -11,7 +12,12 @@ const Homepagecatalog = () => {
     phoneNumber: ''
   });
   const [isFormOpen, setIsFormOpen] = useState(false);
-
+  useEffect(() => {
+    console.log('CMS URL:', Config.CMS_URL);
+    console.log('Admin email:', Config.ADMIN_EMAIL);
+    console.log('Admin password:', Config.ADMIN_PASSWORD);
+    console.log('Admin login:', Config.ADMIN_LOGIN);
+  }, []);
   const handlePrevImage = () => {
     if (selectedProperty) {
       setImageIndex((prevIndex) => (
@@ -410,6 +416,7 @@ const Homepagecatalog = () => {
 
   ];
 
+  
   const handleTitleClick = (property) => {
     setSelectedProperty(property);
     setIsOpen(true);
@@ -434,21 +441,18 @@ const Homepagecatalog = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
+    // Ваша логика отправки данных формы
     console.log('Form submitted:', formData);
-    // Clear form data after submission
-    setFormData({
-      name: '',
-      phoneNumber: ''
-    });
-    setIsFormOpen(false); // Close the form after submission
+    // Очистка данных формы после отправки
+    setFormData({ name: '', phoneNumber: '' });
+    setIsFormOpen(false); // Закрытие формы после отправки
 
-    // Call handleSendWhatsApp here to send WhatsApp message
+    // Вызов функции handleSendWhatsApp для отправки сообщения в WhatsApp
     handleSendWhatsApp();
   };
 
   const handleBuyProject = () => {
-    setIsFormOpen(true); // Open the form when "Купить проект" button is clicked
+    setIsFormOpen(true); // Открытие формы при нажатии кнопки "Купить проект"
   };
 
   const handleSendWhatsApp = () => {
@@ -468,6 +472,10 @@ const Homepagecatalog = () => {
     window.location.href = whatsappLink;
   };
 
+  // Сохранение данных формы в Local Storage при изменении
+  useEffect(() => {
+    localStorage.setItem('formData', JSON.stringify(formData));
+  }, [formData]);
 
   return (
     <div className="homepage-container">
@@ -516,7 +524,6 @@ const Homepagecatalog = () => {
                       />
                       <button type="submit" className="submit-btn">Отправить</button>
                     </form>
-
                   ) : (
                     <button className="buy-btn" onClick={handleBuyProject}>Подробнее</button>
                   )}

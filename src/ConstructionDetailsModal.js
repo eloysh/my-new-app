@@ -3,11 +3,15 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './ConstructionDetailsModal.css';
+import Config from './config.js';
 
 const ConstructionDetailsModal = ({ property, onClose }) => {
   const [formData, setFormData] = useState({ name: '', phoneNumber: '' });
   const [showForm, setShowForm] = useState(true); // State to manage form visibility
-
+  console.log('CMS URL:', Config.CMS_URL);
+  console.log('Admin email:', Config.ADMIN_EMAIL);
+  console.log('Admin password:', Config.ADMIN_PASSWORD);
+  console.log('Admin login:', Config.ADMIN_LOGIN);
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -62,7 +66,7 @@ const ConstructionDetailsModal = ({ property, onClose }) => {
       }
     ]
   };
-  
+
   const imageStyle = {
     width: '300px',
     height: '400px',
